@@ -1,0 +1,63 @@
+{
+    "execution_id": "98163382-dc95-42d6-be30-9058d5016b93",
+    "call_status": "completed",
+    "call_datetime_ist": "2026-03-02T11:34:43.489386+05:30",
+    "created_at": "2026-03-02T06:04:43.489386+00:00",
+    "conversation_duration_seconds": null,
+    "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/290b2470-2cb7-46fa-afda-3675e05c0309.mp3",
+    "to_number": "+919876543210",
+    "from_number": "+918035735856",
+    "pre_filled": {
+        "name": "Ajay",
+        "vehicle_number": "BD 7326",
+        "source_location": "",
+        "destination_location": "Mumbai Warehouse"
+    },
+    "extracted_from_call": {
+        "verified_name": "Ajay",
+        "verified_vehicle_number": "BEE DEE SEVEN THREE TWO SIX",
+        "current_location": "",
+        "distance_remaining": "",
+        "eta": "",
+        "issues_faced": "No"
+    },
+    "full_transcript": "assistant: Hello from ACME Logistics!\nuser: चलो।\nassistant:  नमस्ते! मैं Siva बोल रहा हूँ ACME Logistics से। आपसे किस language में बात करूँ ?\nuser: हिंदी में।\nassistant:  अच्छा। क्या मैं Ajay जी से बात कर रहा हूँ?\nuser: हाँ अच्छा।\nassistant:   ठीक है। आपकी गाड़ी का number bee dee seven three two six — यही है?\nuser: बोल रही हूँ।\nassistant:  अच्छा। अभी आप कहाँ हैं, location बताइए?\n",
+    "telephony_data": {
+        "duration": "28",
+        "to_number": "+919876543210",
+        "from_number": "+918035735856",
+        "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/290b2470-2cb7-46fa-afda-3675e05c0309.mp3",
+        "hosted_telephony": true,
+        "provider_call_id": "290b2470-2cb7-46fa-afda-3675e05c0309",
+        "call_type": "outbound",
+        "provider": "plivo",
+        "hangup_by": "Callee",
+        "hangup_reason": "Call recipient hungup",
+        "hangup_provider_code": 4000
+    },
+    "cost_breakdown": {
+        "llm": 4.44,
+        "network": 1,
+        "platform": 2,
+        "synthesizer": 2.26,
+        "transcriber": 0.012,
+        "llm_breakdown": {
+            "hangup": 0,
+            "analytics": 0,
+            "voicemail": 0,
+            "extraction": 0,
+            "conversation": 4.44,
+            "summarization": 0
+        },
+        "transfer_cost": 0,
+        "synthesizer_breakdown": {
+            "conversation": 2.26,
+            "welcome_message": 0
+        },
+        "transcriber_breakdown": {
+            "analytics": 0,
+            "conversation": 0.012
+        }
+    },
+    "error_message": null
+}

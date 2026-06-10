@@ -1,0 +1,63 @@
+{
+    "execution_id": "9041f5e1-6628-4f07-8870-486d53efd0ad",
+    "call_status": "completed",
+    "call_datetime_ist": "2026-03-02T11:35:30.581796+05:30",
+    "created_at": "2026-03-02T06:05:30.581796+00:00",
+    "conversation_duration_seconds": null,
+    "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/b3326f05-5764-4cf1-98fa-9c657001e0ef.mp3",
+    "to_number": "+919876543210",
+    "from_number": "+918035735856",
+    "pre_filled": {
+        "name": "Ajay",
+        "vehicle_number": "BD 7326",
+        "source_location": "",
+        "destination_location": "Mumbai Warehouse"
+    },
+    "extracted_from_call": {
+        "verified_name": "Ajay",
+        "verified_vehicle_number": "bee dee... seven three two six",
+        "current_location": "Rourkela, Odisha",
+        "distance_remaining": "200 kilometers",
+        "eta": "5-6 hours",
+        "issues_faced": "Accident, had to change route"
+    },
+    "full_transcript": "assistant: Hello from ACME Logistics!\nuser: हेलो।\nassistant:  नमस्ते! मैं Siva बोल रहा हूँ ACME Logistics से। आपसे किस language में बात करूँ ?\nuser: हिंदी हिंदी।\nassistant:  क्या मैं Ajay जी से बात कर रहा हूँ?\nuser: हाँ जय बोल रहा हूँ।\nassistant:  जी, Ajay जी। ठीक है। आपकी गाड़ी का number bee dee... seven three two six — यही है?\nuser: हाँ।\nassistant:  अच्छा। अभी आप कहाँ हैं, location बताइए?\nuser: प्रेजेंटली मैं अभी राउरकिला ओडिशा में हूं।\nassistant:  ठीक है, Rourkela, Odisha — समझ गया। destination तक कितना distance बचा है?\nuser: राहुल किला राहुल किला।\nassistant:   ठीक है, समझ गया। destination तक कितना distance बचा है?\nuser: 200 किलोमीटर।\nassistant:   ठीक है। roughly कितने बजे तक पहुँचेंगे आप?\nuser: लग जाएगा।\nassistant:   समझ गया। क्या आप बता सकते हैं, roughly कितने बजे तक पहुँचेंगे?\nuser: 5 6 घंटे।\nassistant:   ठीक है। trip ठीक चल रही है? कोई issue तो नहीं?\nuser: और।\nassistant:   बढ़िया! Smooth चल रही है तो अच्छा है। ठीक है। trip के बारे में कुछ जानना है आपको?\nuser: थोड़ा ऐसा।\nuser: तो था।\nassistant:   कोई बात नहीं, Ajay जी। अगर आपको trip के बारे में कुछ जानना है, तो मैं आपको हमारी team से connect करता हूँ।\nuser: थोड़ा एक्सीडेंट छोटा सा हो गया था तो रूट चेंज करना पड़ा।\nassistant:   ओह, accident हुआ! कोई बात नहीं। जब रूट चेंज करना पड़ा, तो approximately कितनी देर हो सकती है?\nuser: सात आठ।\nuser: आठ घंटे।\nassistant:   समझ गया। ठीक है, Ajay जी। trip के बारे में कुछ और जानना है आपको?\nuser: नहीं नहीं।\nassistant:   Thank you, Ajay जी! Safe drive कीजिए। take care!\n",
+    "telephony_data": {
+        "duration": "106",
+        "to_number": "+919876543210",
+        "from_number": "+918035735856",
+        "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/b3326f05-5764-4cf1-98fa-9c657001e0ef.mp3",
+        "hosted_telephony": true,
+        "provider_call_id": "b3326f05-5764-4cf1-98fa-9c657001e0ef",
+        "call_type": "outbound",
+        "provider": "plivo",
+        "hangup_by": "Callee",
+        "hangup_reason": "Call recipient hungup",
+        "hangup_provider_code": 4000
+    },
+    "cost_breakdown": {
+        "llm": 18.464,
+        "network": 2,
+        "platform": 4,
+        "synthesizer": 9.12,
+        "transcriber": 0.01,
+        "llm_breakdown": {
+            "hangup": 0,
+            "analytics": 0,
+            "voicemail": 0,
+            "extraction": 0,
+            "conversation": 18.464,
+            "summarization": 0
+        },
+        "transfer_cost": 0,
+        "synthesizer_breakdown": {
+            "conversation": 9.12,
+            "welcome_message": 0
+        },
+        "transcriber_breakdown": {
+            "analytics": 0,
+            "conversation": 0.01
+        }
+    },
+    "error_message": null
+}

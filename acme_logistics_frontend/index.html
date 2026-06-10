@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo Voice Bot - Fleet Calls</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .ringing-animation {
+        animation: ring 2s infinite;
+      }
+      @keyframes ring {
+        0% {
+          box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-7xl mx-auto p-6">
+      <!-- Header -->
+      <div
+        class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-3xl font-bold text-gray-900">Neo Voice Bot</h1>
+            <p class="text-gray-600 mt-1">Fleet Management - Outbound Calls</p>
+          </div>
+          <div class="text-right">
+            <div
+              class="text-2xl font-mono text-gray-800"
+              id="currentTime"
+            ></div>
+            <div class="text-sm text-gray-500" id="agentIdDisplay">Agent ID: ...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Call Panel -->
+        <div class="lg:col-span-1">
+          <div
+            class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white"
+            >
+              <h2 class="text-xl font-semibold">Active Call</h2>
+              <p id="callStatus" class="mt-2 text-blue-100">
+                Ready to initiate call
+              </p>
+            </div>
+
+            <div class="p-8 text-center">
+              <!-- Avatar -->
+              <div class="relative inline-block">
+                <div
+                  class="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-5xl font-bold text-white shadow-2xl"
+                  id="avatarCircle"
+                >
+                  <span id="avatarText">K</span>
+                </div>
+                <div
+                  class="absolute inset-0 rounded-full ringing-animation hidden"
+                  id="avatarRing"
+                ></div>
+              </div>
+
+              <!-- Contact Info -->
+              <h3
+                class="text-2xl font-bold text-gray-900 mt-6"
+                id="contactName"
+              >
+                Select Driver
+              </h3>
+              <p class="text-lg text-gray-600 mt-2" id="contactNumber">
+                Choose from list below
+              </p>
+
+              <!-- Duration -->
+              <div
+                class="my-6 text-3xl font-mono text-gray-700 hidden"
+                id="callDuration"
+              >
+                <span class="duration-text">00:00</span>
+              </div>
+
+              <!-- Call Controls -->
+              <div class="flex justify-center gap-6 mt-8">
+                <button
+                  id="callBtn"
+                  class="w-20 h-20 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-xl transform hover:scale-110 transition"
+                >
+                  <i class="fas fa-phone text-3xl"></i>
+                </button>
+                <button
+                  id="endCallBtn"
+                  class="w-20 h-20 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white shadow-xl hidden transform hover:scale-110 transition"
+                >
+                  <i class="fas fa-phone-slash text-3xl"></i>
+                </button>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex justify-center gap-8 mt-10">
+                <button
+                  id="muteBtn"
+                  class="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 transition"
+                >
+                  <i class="fas fa-microphone text-2xl text-gray-700"></i>
+                  <span class="block text-xs mt-2 text-gray-600">Mute</span>
+                </button>
+                <button
+                  id="speakerBtn"
+                  class="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 transition"
+                >
+                  <i class="fas fa-volume-up text-2xl text-gray-700"></i>
+                  <span class="block text-xs mt-2 text-gray-600">Speaker</span>
+                </button>
+                <button
+                  id="addCallBtn"
+                  class="p-4 rounded-xl bg-gray-100 hover:bg-gray-200 transition"
+                >
+                  <i class="fas fa-plus text-2xl text-gray-700"></i>
+                  <span class="block text-xs mt-2 text-gray-600">Add</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Status Message -->
+            <div class="px-6 pb-6">
+              <div
+                id="statusMessage"
+                class="text-center text-sm font-medium py-3 px-4 rounded-lg opacity-0 transition bg-blue-100 text-blue-800"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Driver Selection Card -->
+          <div
+            class="bg-white rounded-xl shadow-md border border-gray-200 p-6 mt-6"
+          >
+            <h3 class="font-semibold text-lg mb-4">Select Driver to Call</h3>
+            <div id="driverList" class="space-y-3"></div>
+          </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">Call History</h2>
+              <div class="flex items-center gap-4">
+                <input
+                  id="executionId"
+                  type="text"
+                  placeholder="Execution ID"
+                  class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button
+                  id="fetchExecutionBtn"
+                  class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                >
+                  Fetch
+                </button>
+                <button
+                  id="loadExecutionsBtn"
+                  class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+                >
+                  Load History
+                </button>
+              </div>
+            </div>
+
+            <div id="executionDetail" class="mb-8"></div>
+            <div
+              id="executionsSummary"
+              class="text-sm text-gray-600 mb-4"
+            ></div>
+            <div id="executionsList" class="space-y-4"></div>
+
+            <div class="flex justify-between items-center mt-8">
+              <button
+                id="prevPageBtn"
+                class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 disabled:opacity-50"
+                disabled
+              >
+                Previous
+              </button>
+              <span id="pageIndicator" class="font-medium">Page 1</span>
+              <button
+                id="nextPageBtn"
+                class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 disabled:opacity-50"
+                disabled
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div
+      id="loadingOverlay"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white rounded-xl p-8 shadow-2xl">
+        <div class="flex items-center gap-4">
+          <div
+            class="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-blue-600"
+          ></div>
+          <span class="text-lg font-medium">Connecting...</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Live clock
+      setInterval(() => {
+        document.getElementById("currentTime").textContent =
+          new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          });
+      }, 1000);
+    </script>
+  </body>
+</html>

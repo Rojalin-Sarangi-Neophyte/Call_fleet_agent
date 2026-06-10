@@ -1,0 +1,6 @@
+backend:
+uvicorn main:app --reload --port 7276
+curl -X POST http://localhost:7276/update-agent
+
+front end:
+python3 -m http.server 7255

@@ -1,0 +1,66 @@
+{
+    "execution_id": "9cc9d906-a6fc-4b3d-87a1-bb6e18b01e97",
+    "call_status": "completed",
+    "call_datetime_ist": "2026-03-12T00:20:32.891563+05:30",
+    "created_at": "2026-03-11T18:50:32.891563+00:00",
+    "conversation_duration_seconds": null,
+    "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/bcf3d91c-a6c2-42a8-a32c-dab0687227a5.mp3",
+    "to_number": "+919876543210",
+    "from_number": "+918035735856",
+    "pre_filled": {
+        "name": "Ajay",
+        "vehicle_number": "BD 7326",
+        "source_location": "",
+        "destination_location": "Mumbai Warehouse"
+    },
+    "extracted_from_call": {
+        "verified_name": "Ajay",
+        "verified_vehicle_number": "BEE DEE seven three two six",
+        "current_location": "Pune, Maharashtra",
+        "distance_remaining": "one hour",
+        "eta": "4-5 hours",
+        "issues_faced": "Tyre puncture, Traffic jam, Political rally"
+    },
+    "full_transcript": "assistant: Hello from ACME Logistics!\nuser: हेलो।\nassistant:  नमस्ते! मैं Siva बोल रहा हूँ ACME Logistics से। आपसे किस language में बात करूँ ?\nuser: हिंदी।\nassistant:  अच्छा। क्या मैं Ajay जी से बात कर रहा हूँ?\nuser: हाँ जय बोल रहा हूँ।\nassistant:  ठीक है, Ajay जी। आपकी गाड़ी का number bee dee... seven three two six — यही है?\nuser: हाँ।\nassistant:  अच्छा। अभी आप कहाँ हैं, location बताइए?\nuser: तो फिर\nassistant:  माफ़ करना, location clearly समझ नहीं आई। आप अभी किस शहर या जगह के पास हैं?\nuser: तो क्या हुआ?\nassistant:   कोई बात नहीं, Ajay जी। क्या आप अपनी current location के बारे में बता सकते हैं?\nuser: अभी मैं पुणे में हूँ।\nassistant:  अच्छा, Pune, Maharashtra — समझ गया। ठीक है। destination तक कितना distance बचा है?\nuser: लगेगा।\nassistant:   कोई बात नहीं। destination तक कितना distance बचा है?\nuser: डेस्टिनेशन क्या है?\nassistant:   आपका destination Mumbai Warehouse है। इस तक कितना distance बचा है?\nuser: एक।\nassistant:  ठीक है, समझ गया। roughly कितने बजे तक पहुँचेंगे आप?\nuser: 100 किलोमीटर है और।\nassistant:   ठीक है। roughly कितने बजे तक पहुँचेंगे आप?\nuser: मतलब अलग।\nassistant:   कोई बात नहीं, Ajay जी। आप लगभग कितने बजे तक Mumbai Warehouse पहुँचेंगे?\nuser: लग जाएगा 4-5 घंटा।\nassistant:   ठीक है। अच्छा। trip ठीक चल रही है? कोई issue तो नहीं?\nuser: नहीं, इशू तो है, मेरा गाड़ी पंक्चर हो गया है।\nassistant:   ओह, गाड़ी पंक्चर हो गया! कोई बात नहीं। तो approximately कितनी देर हो सकती है?\nuser: मेरे को मैकेनिक नहीं मिल रहा है यार।\nuser: बस बस।\nassistant:  समझ सकता हूँ। तो approximately कितनी देर हो सकती है?\nuser: और आगे पूरा रास्ता।\nuser: रस्ता जाम पड़ा है।\nassistant:   अरे, traffic में हैं आप! समझ सकता हूँ। तो approximately कितनी देर हो सकती है?\nuser: है, पॉलिटिकल रैली चल रही है।\nassistant:   समझ सकता हूँ। क्या आपको अंदाजा है कि कितना delay हो सकता है?\nuser: एक रूट।\nassistant:   ठीक है। कोई बात नहीं। ट्रिप के बारे में कुछ जानना है आपको?\nuser: चेंज करके जाना पड़ेगा अभी मुझे फिर।\nassistant:   ठीक है, Ajay जी। अगर आपको हमारी team से connect होना है तो बताइए।\nuser: 9।\nassistant:   कोई बात नहीं, Ajay जी। Safe drive कीजिए। take care!\n",
+    "telephony_data": {
+        "duration": "113",
+        "to_number": "+919876543210",
+        "from_number": "+918035735856",
+        "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/bcf3d91c-a6c2-42a8-a32c-dab0687227a5.mp3",
+        "hosted_telephony": true,
+        "provider_call_id": "bcf3d91c-a6c2-42a8-a32c-dab0687227a5",
+        "call_type": "outbound",
+        "provider": "plivo",
+        "hangup_by": "Callee",
+        "hangup_reason": "Call recipient hungup",
+        "hangup_provider_code": 4000,
+        "ring_duration": 6,
+        "post_dial_delay": 1,
+        "to_number_carrier": "IDEA Cellular Ltd"
+    },
+    "cost_breakdown": {
+        "llm": 25.795,
+        "network": 2,
+        "platform": 4,
+        "synthesizer": 12.56,
+        "transcriber": 0.007,
+        "llm_breakdown": {
+            "hangup": 0,
+            "analytics": 0,
+            "voicemail": 0,
+            "extraction": 0,
+            "conversation": 25.795,
+            "summarization": 0
+        },
+        "transfer_cost": 0,
+        "synthesizer_breakdown": {
+            "conversation": 12.56,
+            "welcome_message": 0
+        },
+        "transcriber_breakdown": {
+            "analytics": 0,
+            "conversation": 0.007
+        }
+    },
+    "error_message": null
+}

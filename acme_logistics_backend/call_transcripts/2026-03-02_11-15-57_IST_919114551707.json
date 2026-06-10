@@ -1,0 +1,63 @@
+{
+    "execution_id": "ede03d44-c2d0-466d-94dc-b89c03c5ac94",
+    "call_status": "completed",
+    "call_datetime_ist": "2026-03-02T11:15:57.730204+05:30",
+    "created_at": "2026-03-02T05:45:57.730204+00:00",
+    "conversation_duration_seconds": null,
+    "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/2982b687-b810-4ee7-8e0c-8ca4e74fb2f4.mp3",
+    "to_number": "+919876543210",
+    "from_number": "+918035735856",
+    "pre_filled": {
+        "name": "Ajay",
+        "vehicle_number": "BD 7326",
+        "source_location": "",
+        "destination_location": "Mumbai Warehouse"
+    },
+    "extracted_from_call": {
+        "verified_name": "Ajay",
+        "verified_vehicle_number": "bee dee... seven three two six",
+        "current_location": "Navi Mumbai, Maharashtra",
+        "distance_remaining": "खागर नवे मुंबई (Khargar Navi Mumbai)",
+        "eta": "चार बजे (4 o'clock)",
+        "issues_faced": "No"
+    },
+    "full_transcript": "assistant: Hello from ACME Logistics!\nuser: हेलो।\nassistant:  नमस्ते! मैं Siva बोल रहा हूँ ACME Logistics से। आपसे किस language में बात करूँ ?\nuser: मराठी में।\nassistant:  बरं. मी Ajay जींशी बोलतोय का?\nuser: हो।\nassistant:  समजलं. तुमच्या गाडीचा number bee dee... seven three two six — हाच आहे का?\nuser: अजय बोल रहा है।\nassistant:  बरं. आत्ता आपण कुठे आहात, location सांगा?\nuser: आता मैं।\nassistant:  माफ करा, location नीट समजली नाही। आपण कुठल्या शहराजवळ आहात?\nuser: कार्बन नवी मुंबई में थी।\nassistant:  बरं, Navi Mumbai, Maharashtra — समजलं. ठीक आहे। destination पर्यंत किती distance बाकी आहे?\nuser: खागर नवे मुंबई।\nassistant:   ठीक आहे. साधारण किती वाजता पोहोचाल आपण?\nuser: चार बजे।\nuser: हो जाता है।\nassistant:   बरं। trip व्यवस्थित चालू आहे? काही issue नाही ना?\nuser: नहीं।\nassistant:   छान! Smooth चाललीय तर. ठीक आहे। trip बद्दल काही विचारायचं आहे का आपल्याला?\nuser: ना, मैंने कोई पूछा नहीं।\nassistant:   Thank you, Ajay जी! Safe drive करा। take care!\n",
+    "telephony_data": {
+        "duration": "63",
+        "to_number": "+919876543210",
+        "from_number": "+918035735856",
+        "recording_url": "https://bolna-recordings-india.s3.ap-south-1.amazonaws.com/plivo/2982b687-b810-4ee7-8e0c-8ca4e74fb2f4.mp3",
+        "hosted_telephony": true,
+        "provider_call_id": "2982b687-b810-4ee7-8e0c-8ca4e74fb2f4",
+        "call_type": "outbound",
+        "provider": "plivo",
+        "hangup_by": "Callee",
+        "hangup_reason": "Call recipient hungup",
+        "hangup_provider_code": 4000
+    },
+    "cost_breakdown": {
+        "llm": 12.522,
+        "network": 2,
+        "platform": 4,
+        "synthesizer": 5.82,
+        "transcriber": 0.004,
+        "llm_breakdown": {
+            "hangup": 0,
+            "analytics": 0,
+            "voicemail": 0,
+            "extraction": 0,
+            "conversation": 12.522,
+            "summarization": 0
+        },
+        "transfer_cost": 0,
+        "synthesizer_breakdown": {
+            "conversation": 5.82,
+            "welcome_message": 0
+        },
+        "transcriber_breakdown": {
+            "analytics": 0,
+            "conversation": 0.004
+        }
+    },
+    "error_message": null
+}
